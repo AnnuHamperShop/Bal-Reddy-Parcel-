@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Premium Parcel Tracking</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:#f4f6f9;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#20252b;
+}
+
+.top{
+    background:#ffffff;
+    border-bottom:1px solid #e4e7eb;
+    padding:18px 16px;
+    text-align:center;
+}
+
+.brand{
+    font-size:24px;
+    font-weight:800;
+}
+
+.demo{
+    display:inline-block;
+    margin-top:7px;
+    padding:4px 9px;
+    border-radius:5px;
+    background:#fff3cd;
+    color:#795c00;
+    font-size:11px;
+    font-weight:700;
+}
+
+.wrap{
+    max-width:720px;
+    margin:22px auto;
+    padding:0 14px;
+}
+
+.card{
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+    padding:20px;
+    margin-bottom:16px;
+}
+
+h2{
+    margin:0 0 15px;
+    font-size:19px;
+}
+
+.search{
+    display:flex;
+    gap:10px;
+}
+
+input{
+    flex:1;
+    padding:14px;
+    border:1px solid #d6dbe1;
+    border-radius:9px;
+    font-size:15px;
+    outline:none;
+}
+
+button{
+    border:0;
+    border-radius:9px;
+    padding:0 20px;
+    background:#111827;
+    color:#fff;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.status{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+}
+
+.pill{
+    background:#e8f7ed;
+    color:#16733a;
+    padding:8px 11px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.muted{
+    color:#69717b;
+    font-size:13px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.info{
+    background:#f8f9fb;
+    padding:13px;
+    border-radius:9px;
+}
+
+.label{
+    font-size:11px;
+    color:#7a828c;
+    text-transform:uppercase;
+    margin-bottom:5px;
+}
+
+.value{
+    font-size:14px;
+    font-weight:700;
+    line-height:1.4;
+}
+
+.timeline{
+    position:relative;
+    margin:8px 0 0 8px;
+    padding-left:27px;
+}
+
+.timeline:before{
+    content:"";
+    position:absolute;
+    left:7px;
+    top:7px;
+    bottom:7px;
+    width:2px;
+    background:#d9dee5;
+}
+
+.event{
+    position:relative;
+    padding:0 0 24px;
+}
+
+.event:last-child{
+    padding-bottom:0;
+}
+
+.dot{
+    position:absolute;
+    left:-27px;
+    top:2px;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:#fff;
+    border:3px solid #9aa3ad;
+}
+
+.event.active .dot{
+    border-color:#16a34a;
+    background:#16a34a;
+}
+
+.event strong{
+    font-size:14px;
+}
+
+.time{
+    font-size:12px;
+    color:#7a828c;
+    margin-top:4px;
+}
+
+.desc{
+    font-size:12px;
+    color:#59616b;
+    margin-top:4px;
+}
+
+.note{
+    font-size:11px;
+    color:#6b7280;
+    line-height:1.5;
+}
+
+#result{
+    display:none;
+}
+
+@media(max-width:520px){
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .search{
+        flex-direction:column;
+    }
+
+    button{
+        height:46px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+
+    <div class="brand">
+        Premium Parcel Tracking
+    </div>
+
+    <div class="demo">
+        DEMO TRACKING • NOT AN OFFICIAL DELHIVERY PAGE
+    </div>
+
+</div>
+
+
+<div class="wrap">
+
+    <!-- SEARCH -->
+
+    <div class="card">
+
+        <h2>
+            Track Your Parcel
+        </h2>
+
+        <div class="search">
+
+            <input
+                id="trackInput"
+                value="PPSVAD50114101"
+                placeholder="Enter Tracking ID"
+            >
+
+            <button onclick="trackParcel()">
+                TRACK
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div id="result">
+
+        <!-- STATUS -->
+
+        <div class="card">
+
+            <div class="status">
+
+                <div>
+
+                    <div class="muted">
+                        Tracking ID
+                    </div>
+
+                    <h2 style="margin:4px 0 0">
+                        PPSVAD50114101
+                    </h2>
+
+                </div>
+
+                <div class="pill">
+                    DELIVERED
+                </div>
+
+            </div>
+
+            <p class="muted">
+                Parcel delivered on
+                <b>01 October 2026 at 12:00 PM.</b>
+            </p>
+
+        </div>
+
+
+        <!-- DETAILS -->
+
+        <div class="card">
+
+            <h2>
+                Shipment Details
+            </h2>
+
+            <div class="grid">
+
+                <div class="info">
+
+                    <div class="label">
+                        Receiver
+                    </div>
+
+                    <div class="value">
+                        Bal Reddy
+                    </div>
+
+                </div>
+
+
+                <div class="info">
+
+                    <div class="label">
+                        Contact
+                    </div>
+
+                    <div class="value">
+                        9542111053
+                    </div>
+
+                </div>
+
+
+                <div class="info">
+
+                    <div class="label">
+                        Destination
+                    </div>
+
+                    <div class="value">
+                        Tandur, Telangana - 501141
+                    </div>
+
+                </div>
+
+
+                <div class="info">
+
+                    <div class="label">
+                        Origin
+                    </div>
+
+                    <div class="value">
+                        Vadodara, Gujarat
+                    </div>
+
+                </div>
+
+
+                <div class="info">
+
+                    <div class="label">
+                        Current Movement
+                    </div>
+
+                    <div class="value">
+                        Approx. 25 KM from origin shop
+                    </div>
+
+                </div>
+
+
+                <div class="info">
+
+                    <div class="label">
+                        Expected Delivery
+                    </div>
+
+                    <div class="value">
+                        01 Oct 2026 • 12:00 PM
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRACKING HISTORY -->
+
+        <div class="card">
+
+            <h2>
+                Tracking History
+            </h2>
+
+            <div class="timeline">
+
+
+                <div class="event active">
+
+                    <div class="dot"></div>
+
+                    <strong>
+                        Delivered
+                    </strong>
+
+                    <div class="time">
+                        01 Oct 2026 • 12:00 PM
+                    </div>
+
+                    <div class="desc">
+                        Parcel delivered to receiver at
+                        Tandur, Telangana.
+                    </div>
+
+                </div>
+
+
+
+                <div class="event active">
+
+                    <div class="dot"></div>
+
+                    <strong>
+                        In Transit
+                    </strong>
+
+                    <div class="time">
+                        29 Sep 2026 • 08:30 PM
+                    </div>
+
+                    <div class="desc">
+                        Shipment departed from Vadodara
+                        origin area and is approximately
+                        25 KM from the shop.
+                    </div>
+
+                </div>
+
+
+
+                <div class="event active">
+
+                    <div class="dot"></div>
+
+                    <strong>
+                        Shipment Picked Up
+                    </strong>
+
+                    <div class="time">
+                        29 Sep 2026 • 06:00 PM
+                    </div>
+
+                    <div class="desc">
+                        Parcel received at the origin
+                        location in Vadodara, Gujarat.
+                    </div>
+
+                </div>
+
+
+
+                <div class="event active">
+
+                    <div class="dot"></div>
+
+                    <strong>
+                        Booking Created
+                    </strong>
+
+                    <div class="time">
+                        29 Sep 2026 • 05:30 PM
+                    </div>
+
+                    <div class="desc">
+                        Shipment details registered for
+                        delivery to Tandur, Telangana.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- DEMO NOTICE -->
+
+        <div class="card">
+
+            <div class="note">
+
+                This is a privately created demonstration
+                tracking page. It is not connected to
+                Delhivery's systems and does not create or
+                verify a real AWB/shipment.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function trackParcel(){
+
+    const id =
+        document
+        .getElementById("trackInput")
+        .value
+        .trim()
+        .toUpperCase();
+
+
+    if(id === "PPSVAD50114101"){
+
+        document
+        .getElementById("result")
+        .style.display = "block";
+
+
+        document
+        .getElementById("result")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+    else{
+
+        alert(
+            "Demo tracking ID not found. Please enter PPSVAD50114101."
+        );
+
+    }
+
+}
+
+
+document
+.getElementById("trackInput")
+.addEventListener("keydown", function(e){
+
+    if(e.key === "Enter"){
+
+        trackParcel();
+
+    }
+
+});
+
+</script>
+
+</body>
+  </html>

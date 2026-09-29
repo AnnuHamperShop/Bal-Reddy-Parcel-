@@ -14,7 +14,7 @@
 }
 
 body{
-    font-family:Inter,Arial,Helvetica,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#f5f7fb;
     color:#172033;
 }
@@ -46,7 +46,7 @@ body{
     height:42px;
     border-radius:12px;
     background:#111827;
-    color:white;
+    color:#ffffff;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -83,13 +83,13 @@ body{
     padding:0 18px;
 }
 
-/* SEARCH */
+/* SEARCH CARD */
 
 .search-card{
     background:#111827;
     border-radius:20px;
     padding:30px;
-    color:white;
+    color:#ffffff;
     box-shadow:0 15px 40px rgba(17,24,39,.15);
 }
 
@@ -107,7 +107,7 @@ body{
 
 .search-box{
     display:flex;
-    background:white;
+    background:#ffffff;
     border-radius:12px;
     padding:5px;
 }
@@ -125,7 +125,7 @@ body{
 .search-box button{
     border:0;
     background:#111827;
-    color:white;
+    color:#ffffff;
     padding:0 25px;
     border-radius:9px;
     font-weight:700;
@@ -133,7 +133,7 @@ body{
 }
 
 .search-box button:hover{
-    background:#273449;
+    background:#263247;
 }
 
 /* ERROR */
@@ -149,17 +149,17 @@ body{
     font-size:13px;
 }
 
-/* RESULTS */
+/* RESULT */
 
 #result{
     display:none;
     margin-top:22px;
 }
 
-/* STATUS CARD */
+/* STATUS */
 
 .status-card{
-    background:white;
+    background:#ffffff;
     border-radius:18px;
     padding:25px;
     border:1px solid #e8ebf0;
@@ -203,7 +203,7 @@ body{
     font-size:13px;
 }
 
-/* GRID */
+/* INFORMATION */
 
 .grid{
     display:grid;
@@ -213,7 +213,7 @@ body{
 }
 
 .info-card{
-    background:white;
+    background:#ffffff;
     border:1px solid #e8ebf0;
     border-radius:18px;
     padding:22px;
@@ -250,10 +250,10 @@ body{
     color:#202838;
 }
 
-/* TIMELINE */
+/* TRACKING HISTORY */
 
 .timeline-card{
-    background:white;
+    background:#ffffff;
     border:1px solid #e8ebf0;
     border-radius:18px;
     padding:25px;
@@ -263,52 +263,48 @@ body{
 .timeline{
     position:relative;
     margin-top:20px;
-    padding-left:38px;
+    padding-left:40px;
 }
+
+/* VERTICAL LINE */
 
 .timeline:before{
     content:"";
     position:absolute;
     left:9px;
-    top:8px;
-    bottom:8px;
-    width:2px;
-    background:#dfe3e9;
+    top:10px;
+    bottom:10px;
+    width:3px;
+    background:#bde8cf;
 }
 
 .event{
     position:relative;
-    padding-bottom:30px;
+    padding-bottom:32px;
 }
 
 .event:last-child{
     padding-bottom:0;
 }
 
-/* CIRCLE */
+/* GREEN CIRCLES */
 
 .circle{
     position:absolute;
-    left:-38px;
+    left:-40px;
     top:1px;
-    width:20px;
-    height:20px;
+    width:21px;
+    height:21px;
     border-radius:50%;
-    border:4px solid white;
-    box-shadow:0 0 0 2px #d7dce3;
-    background:#e43b3b;
-}
-
-/* ONLY DELIVERED GREEN */
-
-.event.delivered-event .circle{
     background:#16a35a;
+    border:4px solid #ffffff;
     box-shadow:0 0 0 2px #bde8cf;
 }
 
 .event-title{
     font-size:15px;
     font-weight:800;
+    color:#172033;
 }
 
 .event-time{
@@ -350,9 +346,21 @@ body{
 
 @media(max-width:650px){
 
+    .header{
+        padding:16px 14px;
+    }
+
     .header-inner{
-        align-items:flex-start;
-        gap:10px;
+        align-items:center;
+        gap:8px;
+    }
+
+    .logo-text{
+        font-size:18px;
+    }
+
+    .logo-sub{
+        font-size:10px;
     }
 
     .demo-badge{
@@ -374,9 +382,12 @@ body{
         font-size:22px;
     }
 
+    .search-subtitle{
+        line-height:1.5;
+    }
+
     .search-box{
         display:block;
-        background:white;
         padding:5px;
     }
 
@@ -388,6 +399,7 @@ body{
     .search-box button{
         width:100%;
         height:48px;
+        margin-top:5px;
     }
 
     .grid{
@@ -402,9 +414,22 @@ body{
     .tracking-number{
         font-size:20px;
     }
+
+    .delivered{
+        font-size:11px;
+    }
+
+    .timeline-card{
+        padding:22px 20px;
+    }
+
+    .event-description{
+        font-size:13px;
+    }
 }
 </style>
 </head>
+
 
 <body>
 
@@ -421,6 +446,7 @@ body{
             </div>
 
             <div>
+
                 <div class="logo-text">
                     Premium Parcel
                 </div>
@@ -428,12 +454,13 @@ body{
                 <div class="logo-sub">
                     Shipment Tracking
                 </div>
+
             </div>
 
         </div>
 
         <div class="demo-badge">
-             TRACK YOUR PARCEL
+            TRACK YOUR PARCEL
         </div>
 
     </div>
@@ -444,6 +471,7 @@ body{
 <!-- MAIN -->
 
 <main class="container">
+
 
     <!-- SEARCH -->
 
@@ -479,11 +507,13 @@ body{
     </section>
 
 
+
     <!-- RESULT -->
 
     <div id="result">
 
-        <!-- STATUS -->
+
+        <!-- STATUS CARD -->
 
         <section class="status-card">
 
@@ -508,22 +538,32 @@ body{
             </div>
 
             <div class="status-message">
+
                 Shipment delivered successfully on
-                <strong>01 October 2026 at 12:00 PM</strong>.
+
+                <strong>
+                    01 October 2026 at 12:00 PM
+                </strong>.
+
             </div>
 
         </section>
 
 
-        <!-- INFORMATION -->
+
+        <!-- SHIPMENT INFORMATION -->
 
         <div class="grid">
+
+
+            <!-- RECEIVER -->
 
             <section class="info-card">
 
                 <div class="section-title">
                     Shipment Details
                 </div>
+
 
                 <div class="info">
 
@@ -537,6 +577,7 @@ body{
 
                 </div>
 
+
                 <div class="info">
 
                     <div class="label">
@@ -548,6 +589,7 @@ body{
                     </div>
 
                 </div>
+
 
                 <div class="info">
 
@@ -564,11 +606,15 @@ body{
             </section>
 
 
+
+            <!-- ROUTE -->
+
             <section class="info-card">
 
                 <div class="section-title">
                     Shipment Route
                 </div>
+
 
                 <div class="info">
 
@@ -582,6 +628,7 @@ body{
 
                 </div>
 
+
                 <div class="info">
 
                     <div class="label">
@@ -593,6 +640,7 @@ body{
                     </div>
 
                 </div>
+
 
                 <div class="info">
 
@@ -611,6 +659,7 @@ body{
         </div>
 
 
+
         <!-- TRACKING HISTORY -->
 
         <section class="timeline-card">
@@ -619,32 +668,57 @@ body{
                 Tracking History
             </div>
 
+
             <div class="timeline">
 
 
-                <!-- DELIVERED GREEN -->
+                <!-- 1 BOOKING CREATED -->
 
-                <div class="event delivered-event">
+                <div class="event">
 
                     <div class="circle"></div>
 
                     <div class="event-title">
-                        Delivered
+                        Booking Created
                     </div>
 
                     <div class="event-time">
-                        01 Oct 2026 • 12:00 PM
+                        29 Sep 2026 • 05:30 PM
                     </div>
 
                     <div class="event-description">
-                        Parcel delivered to receiver at
-                        Tandur, Telangana.
+                        Shipment details registered for
+                        delivery to Tandur, Telangana.
                     </div>
 
                 </div>
 
 
-                <!-- IN TRANSIT RED -->
+
+                <!-- 2 SHIPMENT PICKED UP -->
+
+                <div class="event">
+
+                    <div class="circle"></div>
+
+                    <div class="event-title">
+                        Shipment Picked Up
+                    </div>
+
+                    <div class="event-time">
+                        29 Sep 2026 • 06:00 PM
+                    </div>
+
+                    <div class="event-description">
+                        Parcel received at the origin
+                        location in Vadodara, Gujarat.
+                    </div>
+
+                </div>
+
+
+
+                <!-- 3 IN TRANSIT -->
 
                 <div class="event">
 
@@ -667,69 +741,60 @@ body{
                 </div>
 
 
-                <!-- PICKED UP RED -->
+
+                <!-- 4 DELIVERED -->
 
                 <div class="event">
 
                     <div class="circle"></div>
 
                     <div class="event-title">
-                        Shipment Picked Up
+                        Delivered
                     </div>
 
                     <div class="event-time">
-                        29 Sep 2026 • 06:00 PM
+                        01 Oct 2026 • 12:00 PM
                     </div>
 
                     <div class="event-description">
-                        Parcel received at the origin
-                        location in Vadodara, Gujarat.
+                        Parcel delivered to receiver at
+                        Tandur, Telangana.
                     </div>
 
                 </div>
 
-
-                <!-- BOOKING RED -->
-
-                <div class="event">
-
-                    <div class="circle"></div>
-
-                    <div class="event-title">
-                        Booking Created
-                    </div>
-
-                    <div class="event-time">
-                        29 Sep 2026 • 05:30 PM
-                    </div>
-
-                    <div class="event-description">
-                        Shipment details registered for
-                        delivery to Tandur, Telangana.
-                    </div>
-
-                </div>
 
             </div>
 
         </section>
-            
 
         </div>
+
 
     </div>
 
 </main>
 
 
+
+<!-- FOOTER -->
+
 <footer class="footer">
+
     © 2026 Premium Parcel Tracking •
+
 </footer>
+
 
 
 <script>
 
+/* VALID TRACKING ID */
+
 const VALID_TRACKING_ID = "PPSVAD50114101";
+
+
+/* TRACK FUNCTION */
 
 function trackShipment(){
 
@@ -742,28 +807,37 @@ function trackShipment(){
     const error =
         document.getElementById("error");
 
+
     const trackingId =
         input.value.trim().toUpperCase();
 
 
-    /* Hide old result */
+    /* Hide previous result */
 
     result.style.display = "none";
+
     error.style.display = "none";
 
 
-    /* Check tracking ID */
+    /* Check Tracking ID */
 
     if(trackingId === VALID_TRACKING_ID){
 
         result.style.display = "block";
 
-        result.scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-        });
 
-    }else{
+        setTimeout(function(){
+
+            result.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+            });
+
+        },100);
+
+    }
+
+    else{
 
         error.style.display = "block";
 
@@ -772,11 +846,11 @@ function trackShipment(){
 }
 
 
-/* ENTER KEY */
+/* ENTER KEY SUPPORT */
 
 document
 .getElementById("trackingInput")
-.addEventListener("keydown", function(event){
+.addEventListener("keydown",function(event){
 
     if(event.key === "Enter"){
 
@@ -789,4 +863,4 @@ document
 </script>
 
 </body>
-</html>
+    </html>

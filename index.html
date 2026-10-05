@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Premium Parcel Tracking</title>
+<title>Premium Parcel Tracking — </title>
 
 <style>
 *{
@@ -19,10 +18,8 @@ body{
     color:#172033;
 }
 
-/* HEADER */
-
 .header{
-    background:#ffffff;
+    background:#fff;
     border-bottom:1px solid #e8ebf0;
     padding:18px 20px;
 }
@@ -46,7 +43,7 @@ body{
     height:42px;
     border-radius:12px;
     background:#111827;
-    color:#ffffff;
+    color:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -67,7 +64,7 @@ body{
 
 .demo-badge{
     font-size:10px;
-    font-weight:700;
+    font-weight:800;
     color:#765900;
     background:#fff5d6;
     border:1px solid #f2df9b;
@@ -75,21 +72,17 @@ body{
     border-radius:30px;
 }
 
-/* MAIN */
-
 .container{
     max-width:1050px;
     margin:35px auto;
     padding:0 18px;
 }
 
-/* SEARCH CARD */
-
 .search-card{
     background:#111827;
     border-radius:20px;
     padding:30px;
-    color:#ffffff;
+    color:#fff;
     box-shadow:0 15px 40px rgba(17,24,39,.15);
 }
 
@@ -107,7 +100,7 @@ body{
 
 .search-box{
     display:flex;
-    background:#ffffff;
+    background:#fff;
     border-radius:12px;
     padding:5px;
 }
@@ -118,25 +111,18 @@ body{
     outline:none;
     padding:14px;
     font-size:15px;
-    color:#172033;
     border-radius:10px;
 }
 
 .search-box button{
     border:0;
     background:#111827;
-    color:#ffffff;
+    color:#fff;
     padding:0 25px;
     border-radius:9px;
     font-weight:700;
     cursor:pointer;
 }
-
-.search-box button:hover{
-    background:#263247;
-}
-
-/* ERROR */
 
 #error{
     display:none;
@@ -149,17 +135,27 @@ body{
     font-size:13px;
 }
 
-/* RESULT */
-
 #result{
     display:none;
     margin-top:22px;
 }
 
-/* STATUS */
+.demo-warning{
+    background:#fff8df;
+    border:1px solid #f0d477;
+    color:#725800;
+    padding:13px 16px;
+    border-radius:12px;
+    font-size:12px;
+    line-height:1.5;
+    margin-bottom:18px;
+}
 
-.status-card{
-    background:#ffffff;
+.status-card,
+.info-card,
+.timeline-card,
+.charge-card{
+    background:#fff;
     border-radius:18px;
     padding:25px;
     border:1px solid #e8ebf0;
@@ -173,9 +169,10 @@ body{
     gap:15px;
 }
 
-.tracking-label{
+.tracking-label,
+.label{
     color:#89919e;
-    font-size:11px;
+    font-size:10px;
     text-transform:uppercase;
     letter-spacing:.6px;
 }
@@ -186,9 +183,9 @@ body{
     margin-top:5px;
 }
 
-.delivered{
-    background:#e8f8ef;
-    color:#12834a;
+.pending{
+    background:#fff4d6;
+    color:#946c00;
     padding:9px 14px;
     border-radius:30px;
     font-size:12px;
@@ -203,20 +200,11 @@ body{
     font-size:13px;
 }
 
-/* INFORMATION */
-
 .grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:16px;
     margin-top:18px;
-}
-
-.info-card{
-    background:#ffffff;
-    border:1px solid #e8ebf0;
-    border-radius:18px;
-    padding:22px;
 }
 
 .section-title{
@@ -236,27 +224,54 @@ body{
     margin-bottom:0;
 }
 
-.label{
-    font-size:10px;
-    color:#8a929e;
-    text-transform:uppercase;
-    letter-spacing:.5px;
-    margin-bottom:5px;
-}
-
 .value{
     font-size:14px;
     font-weight:700;
     color:#202838;
+    margin-top:5px;
 }
 
-/* TRACKING HISTORY */
+.charge-card{
+    margin-top:18px;
+    border:1px solid #f0d477;
+    background:#fffdf5;
+}
+
+.charge-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.charge-title{
+    font-size:18px;
+    font-weight:800;
+}
+
+.charge-sub{
+    color:#777;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.amount{
+    font-size:25px;
+    font-weight:900;
+}
+
+.charge-status{
+    display:inline-block;
+    margin-top:15px;
+    padding:7px 11px;
+    border-radius:20px;
+    background:#fff0c2;
+    color:#8a6500;
+    font-size:11px;
+    font-weight:800;
+}
 
 .timeline-card{
-    background:#ffffff;
-    border:1px solid #e8ebf0;
-    border-radius:18px;
-    padding:25px;
     margin-top:18px;
 }
 
@@ -265,8 +280,6 @@ body{
     margin-top:20px;
     padding-left:40px;
 }
-
-/* VERTICAL LINE */
 
 .timeline:before{
     content:"";
@@ -287,8 +300,6 @@ body{
     padding-bottom:0;
 }
 
-/* GREEN CIRCLES */
-
 .circle{
     position:absolute;
     left:-40px;
@@ -297,14 +308,13 @@ body{
     height:21px;
     border-radius:50%;
     background:#16a35a;
-    border:4px solid #ffffff;
+    border:4px solid #fff;
     box-shadow:0 0 0 2px #bde8cf;
 }
 
 .event-title{
     font-size:15px;
     font-weight:800;
-    color:#172033;
 }
 
 .event-time{
@@ -320,21 +330,6 @@ body{
     margin-top:5px;
 }
 
-/* NOTICE */
-
-.notice{
-    margin-top:18px;
-    background:#ffffff;
-    border:1px solid #e8ebf0;
-    border-radius:15px;
-    padding:16px;
-    color:#7b8490;
-    font-size:11px;
-    line-height:1.6;
-}
-
-/* FOOTER */
-
 .footer{
     text-align:center;
     color:#9299a4;
@@ -342,25 +337,14 @@ body{
     padding:30px 15px;
 }
 
-/* MOBILE */
-
 @media(max-width:650px){
 
     .header{
         padding:16px 14px;
     }
 
-    .header-inner{
-        align-items:center;
-        gap:8px;
-    }
-
     .logo-text{
         font-size:18px;
-    }
-
-    .logo-sub{
-        font-size:10px;
     }
 
     .demo-badge{
@@ -375,20 +359,14 @@ body{
 
     .search-card{
         padding:22px;
-        border-radius:17px;
     }
 
     .search-title{
         font-size:22px;
     }
 
-    .search-subtitle{
-        line-height:1.5;
-    }
-
     .search-box{
         display:block;
-        padding:5px;
     }
 
     .search-box input{
@@ -407,394 +385,283 @@ body{
     }
 
     .status-top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .charge-row{
         align-items:flex-start;
         flex-direction:column;
     }
 
-    .tracking-number{
-        font-size:20px;
-    }
-
-    .delivered{
-        font-size:11px;
-    }
-
-    .timeline-card{
-        padding:22px 20px;
-    }
-
-    .event-description{
-        font-size:13px;
+    .amount{
+        font-size:23px;
     }
 }
 </style>
 </head>
 
-
 <body>
 
-<!-- HEADER -->
-
 <header class="header">
-
     <div class="header-inner">
 
         <div class="logo">
-
-            <div class="logo-icon">
-                P
-            </div>
+            <div class="logo-icon">P</div>
 
             <div>
-
-                <div class="logo-text">
-                    Premium Parcel
-                </div>
-
-                <div class="logo-sub">
-                    Shipment Tracking
-                </div>
-
+                <div class="logo-text">Premium Parcel</div>
+                <div class="logo-sub">Shipment Tracking</div>
             </div>
-
         </div>
 
         <div class="demo-badge">
-            TRACK YOUR PARCEL
+            Check 
         </div>
 
     </div>
-
 </header>
-
-
-<!-- MAIN -->
 
 <main class="container">
 
+<section class="search-card">
 
-    <!-- SEARCH -->
+    <div class="search-title">
+        Track Your Shipment
+    </div>
 
-    <section class="search-card">
+    <div class="search-subtitle">
+         tracking page — enter the tracking ID below
+    </div>
 
-        <div class="search-title">
-            Track Your Shipment
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="trackingInput"
+            placeholder="Enter Tracking ID"
+            autocomplete="off"
+        >
+
+        <button onclick="trackShipment()">
+            TRACK SHIPMENT
+        </button>
+
+    </div>
+
+    <div id="error">
+        Tracking ID not found. Please check the Tracking ID.
+    </div>
+
+</section>
+
+
+<div id="result">
+
+    <div class="demo-warning">
+        <strong>Real PAGE:</strong>
+        This is a Geniune shipment-tracking interface. Any charge shown below
+        is for Real purposes only.
+    </div>
+
+
+    <section class="status-card">
+
+        <div class="status-top">
+
+            <div>
+                <div class="tracking-label">
+                    Tracking ID
+                </div>
+
+                <div class="tracking-number">
+                    PPSURAT395004
+                </div>
+            </div>
+
+            <div class="pending">
+                PAYMENT PENDING
+            </div>
+
         </div>
 
-        <div class="search-subtitle">
-            Enter your tracking ID to view shipment information
-        </div>
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                id="trackingInput"
-                placeholder="Enter Tracking ID"
-                autocomplete="off"
-            >
-
-            <button onclick="trackShipment()">
-                TRACK SHIPMENT
-            </button>
-
-        </div>
-
-        <div id="error">
-            Tracking ID not found. Please check the Tracking ID and try again.
+        <div class="status-message">
+            Shipment is currently shown as pending in this Real.
         </div>
 
     </section>
 
 
+    <div class="grid">
 
-    <!-- RESULT -->
-
-    <div id="result">
-
-
-        <!-- STATUS CARD -->
-
-        <section class="status-card">
-
-            <div class="status-top">
-
-                <div>
-
-                    <div class="tracking-label">
-                        Tracking ID
-                    </div>
-
-                    <div class="tracking-number">
-                        PPSVAD50114101
-                    </div>
-
-                </div>
-
-                <div class="delivered">
-                    DELIVERED
-                </div>
-
-            </div>
-
-            <div class="status-message">
-
-                Shipment delivered successfully on
-
-                <strong>
-                    01 October 2026 at 12:00 PM
-                </strong>.
-
-            </div>
-
-        </section>
-
-
-
-        <!-- SHIPMENT INFORMATION -->
-
-        <div class="grid">
-
-
-            <!-- RECEIVER -->
-
-            <section class="info-card">
-
-                <div class="section-title">
-                    Shipment Details
-                </div>
-
-
-                <div class="info">
-
-                    <div class="label">
-                        Receiver
-                    </div>
-
-                    <div class="value">
-                        Bal Reddy
-                    </div>
-
-                </div>
-
-
-                <div class="info">
-
-                    <div class="label">
-                        Contact
-                    </div>
-
-                    <div class="value">
-                        9542111053
-                    </div>
-
-                </div>
-
-
-                <div class="info">
-
-                    <div class="label">
-                        Destination
-                    </div>
-
-                    <div class="value">
-                        Tandur, Telangana - 501141
-                    </div>
-
-                </div>
-
-            </section>
-
-
-
-            <!-- ROUTE -->
-
-            <section class="info-card">
-
-                <div class="section-title">
-                    Shipment Route
-                </div>
-
-
-                <div class="info">
-
-                    <div class="label">
-                        Origin
-                    </div>
-
-                    <div class="value">
-                        Vadodara, Gujarat
-                    </div>
-
-                </div>
-
-
-                <div class="info">
-
-                    <div class="label">
-                        Current Movement
-                    </div>
-
-                    <div class="value">
-                        Approx. 25 KM from origin shop
-                    </div>
-
-                </div>
-
-
-                <div class="info">
-
-                    <div class="label">
-                        Delivery
-                    </div>
-
-                    <div class="value">
-                        01 Oct 2026 • 12:00 PM
-                    </div>
-
-                </div>
-
-            </section>
-
-        </div>
-
-
-
-        <!-- TRACKING HISTORY -->
-
-        <section class="timeline-card">
+        <section class="info-card">
 
             <div class="section-title">
-                Tracking History
+                Receiver Details
             </div>
 
+            <div class="info">
+                <div class="label">Receiver</div>
+                <div class="value">Mansi Mandani</div>
+            </div>
 
-            <div class="timeline">
+            <div class="info">
+                <div class="label">Contact</div>
+                <div class="value">7285051175</div>
+            </div>
 
-
-                <!-- 1 BOOKING CREATED -->
-
-                <div class="event">
-
-                    <div class="circle"></div>
-
-                    <div class="event-title">
-                        Booking Created
-                    </div>
-
-                    <div class="event-time">
-                        29 Sep 2026 • 05:30 PM
-                    </div>
-
-                    <div class="event-description">
-                        Shipment details registered for
-                        delivery to Tandur, Telangana.
-                    </div>
-
+            <div class="info">
+                <div class="label">Parcel</div>
+                <div class="value">
+                    Surat, Gujarat - 395004, India
                 </div>
-
-
-
-                <!-- 2 SHIPMENT PICKED UP -->
-
-                <div class="event">
-
-                    <div class="circle"></div>
-
-                    <div class="event-title">
-                        Shipment Picked Up
-                    </div>
-
-                    <div class="event-time">
-                        29 Sep 2026 • 06:00 PM
-                    </div>
-
-                    <div class="event-description">
-                        Parcel received at the origin
-                        location in Vadodara, Gujarat.
-                    </div>
-
-                </div>
-
-
-
-                <!-- 3 IN TRANSIT -->
-
-                <div class="event">
-
-                    <div class="circle"></div>
-
-                    <div class="event-title">
-                        In Transit
-                    </div>
-
-                    <div class="event-time">
-                        29 Sep 2026 • 08:30 PM
-                    </div>
-
-                    <div class="event-description">
-                        Shipment departed from Vadodara
-                        origin area and is approximately
-                        25 KM from the shop.
-                    </div>
-
-                </div>
-
-
-
-                <!-- 4 DELIVERED -->
-
-                <div class="event">
-
-                    <div class="circle"></div>
-
-                    <div class="event-title">
-                        Delivered
-                    </div>
-
-                    <div class="event-time">
-                        01 Oct 2026 • 12:00 PM
-                    </div>
-
-                    <div class="event-description">
-                        Parcel delivered to receiver at
-                        Tandur, Telangana.
-                    </div>
-
-                </div>
-
-
             </div>
 
         </section>
 
-        </div>
 
+        <section class="info-card">
+
+            <div class="section-title">
+                Delivery Address
+            </div>
+
+            <div class="info">
+                <div class="label">Address</div>
+                <div class="value">
+                    BB 2 Sharp Enterprises,<br>
+                    Ground Floor, Near Shivam Jewels,<br>
+                    Vasta Devdi Road,<br>
+                    Katargam, Surat,<br>
+                    Gujarat - 395004, India
+                </div>
+            </div>
+
+        </section>
 
     </div>
 
+
+    <section class="charge-card">
+
+        <div class="charge-row">
+
+            <div>
+                <div class="charge-title">
+                    Delivery Charge
+                </div>
+
+                <div class="charge-sub">
+                    Realistic amount
+                </div>
+            </div>
+
+            <div class="amount">
+                ₹1,998.90
+            </div>
+
+        </div>
+
+        <div class="charge-status">
+            REAL — PAYMENT PENDING
+        </div>
+
+    </section>
+
+
+    <section class="timeline-card">
+
+        <div class="section-title">
+            Tracking History
+        </div>
+
+        <div class="timeline">
+
+            <div class="event">
+                <div class="circle"></div>
+
+                <div class="event-title">
+                    Booking Created
+                </div>
+
+                <div class="event-time">
+                    05 October 2026 • 08:33 PM
+                </div>
+
+                <div class="event-description">
+                    Shipment details registered for
+                    delivery to Surat, Gujarat.
+                </div>
+            </div>
+
+
+            <div class="event">
+                <div class="circle"></div>
+
+                <div class="event-title">
+                    Shipment Picked Up
+                </div>
+
+                <div class="event-time">
+                    05 October 2026 • 06:00 PM
+                </div>
+
+                <div class="event-description">
+                    Parcel received at the origin location.
+                </div>
+            </div>
+
+
+            <div class="event">
+                <div class="circle"></div>
+
+                <div class="event-title">
+                    In Transit
+                </div>
+
+                <div class="event-time">
+                    06 Octomber 2026 • 08:30 PM
+                </div>
+
+                <div class="event-description">
+                    Shipment is shown as in transit in this demo.
+                </div>
+            </div>
+
+
+            <div class="event">
+                <div class="circle"></div>
+
+                <div class="event-title">
+                    Delivery Charge Pending
+                </div>
+
+                <div class="event-time">
+                    05 Oct 2026 • 1:00 AM 
+                </div>
+
+                <div class="event-description">
+                    Real status showing a pending delivery charge
+                    of ₹1,998.90.
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
 </main>
 
-
-
-<!-- FOOTER -->
-
 <footer class="footer">
-
     © 2026 Premium Parcel Tracking •
-
 </footer>
-
 
 
 <script>
 
-/* VALID TRACKING ID */
-
-const VALID_TRACKING_ID = "PPSVAD50114101";
-
-
-/* TRACK FUNCTION */
+const VALID_TRACKING_ID = "PPSURAT395004";
 
 function trackShipment(){
 
@@ -807,24 +674,15 @@ function trackShipment(){
     const error =
         document.getElementById("error");
 
-
     const trackingId =
         input.value.trim().toUpperCase();
 
-
-    /* Hide previous result */
-
     result.style.display = "none";
-
     error.style.display = "none";
-
-
-    /* Check Tracking ID */
 
     if(trackingId === VALID_TRACKING_ID){
 
         result.style.display = "block";
-
 
         setTimeout(function(){
 
@@ -835,27 +693,19 @@ function trackShipment(){
 
         },100);
 
-    }
-
-    else{
+    }else{
 
         error.style.display = "block";
 
     }
-
 }
-
-
-/* ENTER KEY SUPPORT */
 
 document
 .getElementById("trackingInput")
 .addEventListener("keydown",function(event){
 
     if(event.key === "Enter"){
-
         trackShipment();
-
     }
 
 });

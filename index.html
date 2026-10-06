@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Premium Parcel Tracking</title>
+<title>Premium Parcel Tracking </title>
 
 <style>
 *{
@@ -232,7 +232,6 @@ body{
     line-height:1.55;
 }
 
-
 /* DELIVERY CHARGE */
 
 .delivery-charge-demo{
@@ -286,7 +285,6 @@ body{
     color:#9a7b18;
 }
 
-
 /* DISPATCH CARD */
 
 .dispatch-card{
@@ -329,7 +327,6 @@ body{
     margin-top:4px;
     text-align:right;
 }
-
 
 /* TIMELINE */
 
@@ -374,6 +371,13 @@ body{
     box-shadow:0 0 0 2px #bde8cf;
 }
 
+/* ONLY DELIVERY CHARGE CIRCLE IS RED */
+
+.charge-event .circle{
+    background:#e53935;
+    box-shadow:0 0 0 2px #ffc7c7;
+}
+
 .event-title{
     font-size:15px;
     font-weight:800;
@@ -398,7 +402,6 @@ body{
     font-size:11px;
     padding:30px 15px;
 }
-
 
 /* MOBILE */
 
@@ -475,7 +478,6 @@ body{
 </style>
 </head>
 
-
 <body>
 
 <header class="header">
@@ -494,23 +496,21 @@ body{
                 </div>
 
                 <div class="logo-sub">
-                    Shipment Tracking
+                    Shipment Tracking 
                 </div>
             </div>
 
         </div>
 
         <div class="demo-badge">
-            CHECK ✅
+            Check Here ✅
         </div>
 
     </div>
 
 </header>
 
-
 <main class="container">
-
 
 <section class="search-card">
 
@@ -519,7 +519,7 @@ body{
     </div>
 
     <div class="search-subtitle">
-        tracking page — enter the tracking ID below
+         tracking page — enter the tracking ID below
     </div>
 
     <div class="search-box">
@@ -543,20 +543,12 @@ body{
 
 </section>
 
-
-
 <div id="result">
 
-
-    <div class="USE-warning">
-
-        <strong>TRACK NOW:</strong>
-
+    <div class="demo-warning">
+        <strong>TRACK PAGE:</strong>
+        This interface is for Really purposes only.
     </div>
-
-
-
-    <!-- STATUS -->
 
     <section class="status-card">
 
@@ -581,27 +573,19 @@ body{
         </div>
 
         <div class="status-message">
-
-            Your parcel is scheduled for
+            Parcel dispatch is scheduled for
             <strong>10 October 2026</strong>.
-
         </div>
 
     </section>
 
-
-
-    <!-- DETAILS -->
-
     <div class="grid">
-
 
         <section class="info-card">
 
             <div class="section-title">
                 Receiver Details
             </div>
-
 
             <div class="info">
 
@@ -615,7 +599,6 @@ body{
 
             </div>
 
-
             <div class="info">
 
                 <div class="label">
@@ -627,7 +610,6 @@ body{
                 </div>
 
             </div>
-
 
             <div class="info">
 
@@ -645,14 +627,11 @@ body{
 
         </section>
 
-
-
         <section class="info-card">
 
             <div class="section-title">
                 Delivery Address
             </div>
-
 
             <div class="info">
 
@@ -661,26 +640,21 @@ body{
                 </div>
 
                 <div class="value">
-
                     Jalpally,<br>
                     Hyderabad,<br>
                     Telangana - 5000005,<br>
                     India
-
                 </div>
 
             </div>
 
         </section>
 
-
     </div>
 
+    <!--  DELIVERY CHARGE -->
 
-
-    <!-- DELIVERY CHARGE -->
-
-    <section class="delivery-charge-JJV">
+    <section class="delivery-charge-demo">
 
         <div class="charge-icon">
             ₹
@@ -689,7 +663,7 @@ body{
         <div class="charge-content">
 
             <div class="charge-label">
-                PENDING DELIVERY CHARGE
+                DELIVERY CHARGE — PENDING
             </div>
 
             <div class="charge-amount">
@@ -697,14 +671,12 @@ body{
             </div>
 
             <div class="charge-note">
-                PAY AMOUNT • FOR DISPLAY ONLY
+                DISPLAY ONLY • FOR A PAYMENT REQUEST
             </div>
 
         </div>
 
     </section>
-
-
 
     <!-- DISPATCH -->
 
@@ -724,7 +696,6 @@ body{
 
             </div>
 
-
             <div>
 
                 <div class="dispatch-date">
@@ -741,8 +712,6 @@ body{
 
     </section>
 
-
-
     <!-- TRACKING HISTORY -->
 
     <section class="timeline-card">
@@ -751,9 +720,7 @@ body{
             Tracking History
         </div>
 
-
         <div class="timeline">
-
 
             <div class="event">
 
@@ -768,12 +735,10 @@ body{
                 </div>
 
                 <div class="event-description">
-                    Shipment details registered in this demo.
+                    Shipment details registered in this
                 </div>
 
             </div>
-
-
 
             <div class="event">
 
@@ -793,9 +758,9 @@ body{
 
             </div>
 
+            <!-- RED CIRCLE -->
 
-
-            <div class="event">
+            <div class="event charge-event">
 
                 <div class="circle"></div>
 
@@ -804,17 +769,15 @@ body{
                 </div>
 
                 <div class="event-time">
-                    TRACKING DETAILS 
+                    TRACKING DETAILS
                 </div>
 
                 <div class="event-description">
-                    Delivery charge displayed :
+                    Pending delivery charge displayed:
                     ₹1,998.09.
                 </div>
 
             </div>
-
-
 
             <div class="event">
 
@@ -829,36 +792,27 @@ body{
                 </div>
 
                 <div class="event-description">
-                    Parcel dispatch is scheduled for the above date
-                    and time in this Real.
+                    Parcel dispatch is scheduled for the
+                    above date and time in this Time.
                 </div>
 
             </div>
-
 
         </div>
 
     </section>
 
-
 </div>
 
 </main>
 
-
-
 <footer class="footer">
-
-    © 2026 Premium Parcel Tracking 
-
+    © 2026 Premium Parcel Tracking • 
 </footer>
-
-
 
 <script>
 
 const VALID_TRACKING_ID = "PPSURAT395004";
-
 
 function trackShipment(){
 
@@ -874,53 +828,40 @@ function trackShipment(){
     const trackingId =
         input.value.trim().toUpperCase();
 
-
     result.style.display = "none";
-
     error.style.display = "none";
-
 
     if(trackingId === VALID_TRACKING_ID){
 
         result.style.display = "block";
 
-
         setTimeout(function(){
 
             result.scrollIntoView({
-
                 behavior:"smooth",
-
                 block:"start"
-
             });
 
         },100);
-
 
     }else{
 
         error.style.display = "block";
 
     }
-
 }
-
 
 document
 .getElementById("trackingInput")
 .addEventListener("keydown",function(event){
 
     if(event.key === "Enter"){
-
         trackShipment();
-
     }
 
 });
 
 </script>
 
-
 </body>
-</html>
+        </html>

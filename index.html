@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Parcel Tracking — </title>
+
+<title>Premium Parcel Tracking</title>
 
 <style>
 *{
@@ -153,8 +154,7 @@ body{
 
 .status-card,
 .info-card,
-.timeline-card,
-.charge-card{
+.timeline-card{
     background:#fff;
     border-radius:18px;
     padding:25px;
@@ -183,9 +183,9 @@ body{
     margin-top:5px;
 }
 
-.pending{
-    background:#fff4d6;
-    color:#946c00;
+.dispatch{
+    background:#e5f8ed;
+    color:#137a43;
     padding:9px 14px;
     border-radius:30px;
     font-size:12px;
@@ -229,46 +229,48 @@ body{
     font-weight:700;
     color:#202838;
     margin-top:5px;
+    line-height:1.55;
 }
 
-.charge-card{
+.dispatch-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
     margin-top:18px;
-    border:1px solid #f0d477;
-    background:#fffdf5;
+    border:1px solid #ccebd9;
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
 }
 
-.charge-row{
+.dispatch-row{
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:15px;
 }
 
-.charge-title{
+.dispatch-title{
     font-size:18px;
     font-weight:800;
 }
 
-.charge-sub{
+.dispatch-sub{
     color:#777;
     font-size:12px;
     margin-top:5px;
 }
 
-.amount{
-    font-size:25px;
+.dispatch-date{
+    font-size:22px;
     font-weight:900;
+    color:#137a43;
+    text-align:right;
 }
 
-.charge-status{
-    display:inline-block;
-    margin-top:15px;
-    padding:7px 11px;
-    border-radius:20px;
-    background:#fff0c2;
-    color:#8a6500;
-    font-size:11px;
-    font-weight:800;
+.dispatch-time{
+    font-size:12px;
+    color:#68717e;
+    margin-top:4px;
+    text-align:right;
 }
 
 .timeline-card{
@@ -389,13 +391,14 @@ body{
         align-items:flex-start;
     }
 
-    .charge-row{
-        align-items:flex-start;
+    .dispatch-row{
         flex-direction:column;
+        align-items:flex-start;
     }
 
-    .amount{
-        font-size:23px;
+    .dispatch-date,
+    .dispatch-time{
+        text-align:left;
     }
 }
 </style>
@@ -411,16 +414,17 @@ body{
 
             <div>
                 <div class="logo-text">Premium Parcel</div>
-                <div class="logo-sub">Shipment Tracking</div>
+                <div class="logo-sub">Shipment Tracking Check</div>
             </div>
         </div>
 
-        <div class="demo-badge">
-            Check 
+        <div class="CHECK-badge">
+            CHECK NOW ✅
         </div>
 
     </div>
 </header>
+
 
 <main class="container">
 
@@ -459,9 +463,9 @@ body{
 <div id="result">
 
     <div class="demo-warning">
-        <strong>Real PAGE:</strong>
-        This is a Geniune shipment-tracking interface. Any charge shown below
-        is for Real purposes only.
+        <strong>Tracking page:</strong>
+        This interface is for demonstration purposes only and does not
+        represent a real courier shipment, payment request, or delivery status.
     </div>
 
 
@@ -479,14 +483,15 @@ body{
                 </div>
             </div>
 
-            <div class="pending">
-                PAYMENT PENDING
+            <div class="dispatch">
+                DISPATCH SCHEDULED
             </div>
 
         </div>
 
         <div class="status-message">
-            Shipment is currently shown as pending in this Real.
+            Your parcel is scheduled for dispatch on
+            <strong>10 October 2026</strong>.
         </div>
 
     </section>
@@ -502,18 +507,24 @@ body{
 
             <div class="info">
                 <div class="label">Receiver</div>
-                <div class="value">Mansi Mandani</div>
+                <div class="value">
+                    Mohammed zubair (حبیبی)
+                </div>
             </div>
 
             <div class="info">
                 <div class="label">Contact</div>
-                <div class="value">7285051175</div>
+                <div class="value">
+                    7416967464
+                </div>
             </div>
 
             <div class="info">
-                <div class="label">Parcel</div>
+                <div class="label">Location</div>
                 <div class="value">
-                    Surat, Gujarat - 395004, India
+                    Jalpally, Hyderabad<br>
+                    Telangana - 5000005<br>
+                    India
                 </div>
             </div>
 
@@ -527,14 +538,18 @@ body{
             </div>
 
             <div class="info">
-                <div class="label">Address</div>
-                <div class="value">
-                    BB 2 Sharp Enterprises,<br>
-                    Ground Floor, Near Shivam Jewels,<br>
-                    Vasta Devdi Road,<br>
-                    Katargam, Surat,<br>
-                    Gujarat - 395004, India
+
+                <div class="label">
+                    Address
                 </div>
+
+                <div class="value">
+                    Jalpally,<br>
+                    Hyderabad,<br>
+                    Telangana - 5000005,<br>
+                    India
+                </div>
+
             </div>
 
         </section>
@@ -542,28 +557,30 @@ body{
     </div>
 
 
-    <section class="charge-card">
+    <section class="dispatch-card">
 
-        <div class="charge-row">
+        <div class="dispatch-row">
 
             <div>
-                <div class="charge-title">
-                    Delivery Charge
+                <div class="dispatch-title">
+                    PARCEL DISPATCH
                 </div>
 
-                <div class="charge-sub">
-                    Realistic amount
+                <div class="dispatch-sub">
+                    Scheduled dispatch time
                 </div>
             </div>
 
-            <div class="amount">
-                ₹1,998.90
+            <div>
+                <div class="dispatch-date">
+                    10 October 2026
+                </div>
+
+                <div class="dispatch-time">
+                    2:00 PM – 3:00 PM
+                </div>
             </div>
 
-        </div>
-
-        <div class="charge-status">
-            REAL — PAYMENT PENDING
         </div>
 
     </section>
@@ -578,6 +595,7 @@ body{
         <div class="timeline">
 
             <div class="event">
+
                 <div class="circle"></div>
 
                 <div class="event-title">
@@ -585,65 +603,52 @@ body{
                 </div>
 
                 <div class="event-time">
-                    05 October 2026 • 08:33 PM
+                    06 October 2026
                 </div>
 
                 <div class="event-description">
-                    Shipment details registered for
-                    delivery to Surat, Gujarat.
+                    Shipment details registered in this demo.
                 </div>
+
             </div>
 
 
             <div class="event">
+
                 <div class="circle"></div>
 
                 <div class="event-title">
-                    Shipment Picked Up
+                    Shipment Prepared
                 </div>
 
                 <div class="event-time">
-                    05 October 2026 • 06:00 PM
+                    06 October 2026
                 </div>
 
                 <div class="event-description">
-                    Parcel received at the origin location.
+                    Parcel preparation shown as completed.
                 </div>
+
             </div>
 
 
             <div class="event">
+
                 <div class="circle"></div>
 
                 <div class="event-title">
-                    In Transit
+                    PARCEL DISPATCH
                 </div>
 
                 <div class="event-time">
-                    06 Octomber 2026 • 08:30 PM
+                    10 October 2026 • 2:00 PM – 3:00 PM
                 </div>
 
                 <div class="event-description">
-                    Shipment is shown as in transit in this demo.
-                </div>
-            </div>
-
-
-            <div class="event">
-                <div class="circle"></div>
-
-                <div class="event-title">
-                    Delivery Charge Pending
+                    Parcel dispatch is scheduled for the above date
+                    and time in this Home Address.
                 </div>
 
-                <div class="event-time">
-                    05 Oct 2026 • 1:00 AM 
-                </div>
-
-                <div class="event-description">
-                    Real status showing a pending delivery charge
-                    of ₹1,998.90.
-                </div>
             </div>
 
         </div>
@@ -653,6 +658,7 @@ body{
 </div>
 
 </main>
+
 
 <footer class="footer">
     © 2026 Premium Parcel Tracking •
@@ -700,6 +706,7 @@ function trackShipment(){
     }
 }
 
+
 document
 .getElementById("trackingInput")
 .addEventListener("keydown",function(event){
@@ -713,4 +720,4 @@ document
 </script>
 
 </body>
-    </html>
+        </html>

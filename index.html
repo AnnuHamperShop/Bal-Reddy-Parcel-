@@ -232,6 +232,63 @@ body{
     line-height:1.55;
 }
 
+
+/* DELIVERY CHARGE */
+
+.delivery-charge-demo{
+    margin-top:18px;
+    padding:22px;
+    background:linear-gradient(135deg,#fffdf5,#fff8df);
+    border:1px solid #efd477;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    box-shadow:0 10px 30px rgba(130,100,0,.10);
+}
+
+.charge-icon{
+    width:52px;
+    height:52px;
+    min-width:52px;
+    border-radius:15px;
+    background:#111827;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+    font-weight:900;
+}
+
+.charge-content{
+    flex:1;
+}
+
+.charge-label{
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#8a6b00;
+}
+
+.charge-amount{
+    margin-top:4px;
+    font-size:28px;
+    font-weight:900;
+    color:#172033;
+}
+
+.charge-note{
+    margin-top:4px;
+    font-size:10px;
+    font-weight:700;
+    color:#9a7b18;
+}
+
+
+/* DISPATCH CARD */
+
 .dispatch-card{
     background:#fff;
     border-radius:18px;
@@ -272,6 +329,9 @@ body{
     margin-top:4px;
     text-align:right;
 }
+
+
+/* TIMELINE */
 
 .timeline-card{
     margin-top:18px;
@@ -339,6 +399,9 @@ body{
     padding:30px 15px;
 }
 
+
+/* MOBILE */
+
 @media(max-width:650px){
 
     .header{
@@ -391,6 +454,14 @@ body{
         align-items:flex-start;
     }
 
+    .delivery-charge-demo{
+        padding:18px;
+    }
+
+    .charge-amount{
+        font-size:24px;
+    }
+
     .dispatch-row{
         flex-direction:column;
         align-items:flex-start;
@@ -404,29 +475,42 @@ body{
 </style>
 </head>
 
+
 <body>
 
 <header class="header">
+
     <div class="header-inner">
 
         <div class="logo">
-            <div class="logo-icon">P</div>
+
+            <div class="logo-icon">
+                P
+            </div>
 
             <div>
-                <div class="logo-text">Premium Parcel</div>
-                <div class="logo-sub">Shipment Tracking Check</div>
+                <div class="logo-text">
+                    Premium Parcel
+                </div>
+
+                <div class="logo-sub">
+                    Shipment Tracking
+                </div>
             </div>
+
         </div>
 
-        <div class="CHECK-badge">
-            CHECK NOW ✅
+        <div class="demo-badge">
+            CHECK ✅
         </div>
 
     </div>
+
 </header>
 
 
 <main class="container">
+
 
 <section class="search-card">
 
@@ -435,7 +519,7 @@ body{
     </div>
 
     <div class="search-subtitle">
-         tracking page — enter the tracking ID below
+        tracking page — enter the tracking ID below
     </div>
 
     <div class="search-box">
@@ -460,20 +544,26 @@ body{
 </section>
 
 
+
 <div id="result">
 
-    <div class="demo-warning">
-        <strong>Tracking page:</strong>
-        This interface is for demonstration purposes only and does not
-        represent a real courier shipment, payment request, or delivery status.
+
+    <div class="USE-warning">
+
+        <strong>TRACK NOW:</strong>
+
     </div>
 
+
+
+    <!-- STATUS -->
 
     <section class="status-card">
 
         <div class="status-top">
 
             <div>
+
                 <div class="tracking-label">
                     Tracking ID
                 </div>
@@ -481,6 +571,7 @@ body{
                 <div class="tracking-number">
                     PPSURAT395004
                 </div>
+
             </div>
 
             <div class="dispatch">
@@ -490,14 +581,20 @@ body{
         </div>
 
         <div class="status-message">
-            Your parcel is scheduled for dispatch on
+
+            Your parcel is scheduled for
             <strong>10 October 2026</strong>.
+
         </div>
 
     </section>
 
 
+
+    <!-- DETAILS -->
+
     <div class="grid">
+
 
         <section class="info-card">
 
@@ -505,30 +602,49 @@ body{
                 Receiver Details
             </div>
 
+
             <div class="info">
-                <div class="label">Receiver</div>
+
+                <div class="label">
+                    Receiver
+                </div>
+
                 <div class="value">
                     Mohammed zubair (حبیبی)
                 </div>
+
             </div>
 
+
             <div class="info">
-                <div class="label">Contact</div>
+
+                <div class="label">
+                    Contact
+                </div>
+
                 <div class="value">
                     7416967464
                 </div>
+
             </div>
 
+
             <div class="info">
-                <div class="label">Location</div>
+
+                <div class="label">
+                    Location
+                </div>
+
                 <div class="value">
                     Jalpally, Hyderabad<br>
                     Telangana - 5000005<br>
                     India
                 </div>
+
             </div>
 
         </section>
+
 
 
         <section class="info-card">
@@ -537,6 +653,7 @@ body{
                 Delivery Address
             </div>
 
+
             <div class="info">
 
                 <div class="label">
@@ -544,41 +661,43 @@ body{
                 </div>
 
                 <div class="value">
+
                     Jalpally,<br>
                     Hyderabad,<br>
                     Telangana - 5000005,<br>
                     India
+
                 </div>
 
             </div>
 
         </section>
 
+
     </div>
 
 
-    <section class="dispatch-card">
 
-        <div class="dispatch-row">
+    <!-- DELIVERY CHARGE -->
 
-            <div>
-                <div class="dispatch-title">
-                    PARCEL DISPATCH
-                </div>
+    <section class="delivery-charge-JJV">
 
-                <div class="dispatch-sub">
-                    Scheduled dispatch time
-                </div>
+        <div class="charge-icon">
+            ₹
+        </div>
+
+        <div class="charge-content">
+
+            <div class="charge-label">
+                PENDING DELIVERY CHARGE
             </div>
 
-            <div>
-                <div class="dispatch-date">
-                    10 October 2026
-                </div>
+            <div class="charge-amount">
+                ₹1,998.09
+            </div>
 
-                <div class="dispatch-time">
-                    2:00 PM – 3:00 PM
-                </div>
+            <div class="charge-note">
+                PAY AMOUNT • FOR DISPLAY ONLY
             </div>
 
         </div>
@@ -586,13 +705,55 @@ body{
     </section>
 
 
+
+    <!-- DISPATCH -->
+
+    <section class="dispatch-card">
+
+        <div class="dispatch-row">
+
+            <div>
+
+                <div class="dispatch-title">
+                    PARCEL DISPATCH
+                </div>
+
+                <div class="dispatch-sub">
+                    Scheduled dispatch time
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="dispatch-date">
+                    10 October 2026
+                </div>
+
+                <div class="dispatch-time">
+                    2:00 PM – 3:00 PM
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- TRACKING HISTORY -->
+
     <section class="timeline-card">
 
         <div class="section-title">
             Tracking History
         </div>
 
+
         <div class="timeline">
+
 
             <div class="event">
 
@@ -611,6 +772,7 @@ body{
                 </div>
 
             </div>
+
 
 
             <div class="event">
@@ -632,6 +794,28 @@ body{
             </div>
 
 
+
+            <div class="event">
+
+                <div class="circle"></div>
+
+                <div class="event-title">
+                    Delivery Charge
+                </div>
+
+                <div class="event-time">
+                    TRACKING DETAILS 
+                </div>
+
+                <div class="event-description">
+                    Delivery charge displayed :
+                    ₹1,998.09.
+                </div>
+
+            </div>
+
+
+
             <div class="event">
 
                 <div class="circle"></div>
@@ -646,28 +830,35 @@ body{
 
                 <div class="event-description">
                     Parcel dispatch is scheduled for the above date
-                    and time in this Home Address.
+                    and time in this Real.
                 </div>
 
             </div>
 
+
         </div>
 
     </section>
+
 
 </div>
 
 </main>
 
 
+
 <footer class="footer">
-    © 2026 Premium Parcel Tracking •
+
+    © 2026 Premium Parcel Tracking 
+
 </footer>
+
 
 
 <script>
 
 const VALID_TRACKING_ID = "PPSURAT395004";
+
 
 function trackShipment(){
 
@@ -683,27 +874,36 @@ function trackShipment(){
     const trackingId =
         input.value.trim().toUpperCase();
 
+
     result.style.display = "none";
+
     error.style.display = "none";
+
 
     if(trackingId === VALID_TRACKING_ID){
 
         result.style.display = "block";
 
+
         setTimeout(function(){
 
             result.scrollIntoView({
+
                 behavior:"smooth",
+
                 block:"start"
+
             });
 
         },100);
+
 
     }else{
 
         error.style.display = "block";
 
     }
+
 }
 
 
@@ -712,12 +912,15 @@ document
 .addEventListener("keydown",function(event){
 
     if(event.key === "Enter"){
+
         trackShipment();
+
     }
 
 });
 
 </script>
 
+
 </body>
-        </html>
+</html>
